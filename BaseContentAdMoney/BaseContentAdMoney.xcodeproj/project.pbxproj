@@ -15,6 +15,8 @@
 		139659C21FEA048300CF7ED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 139659C01FEA048300CF7ED0 /* LaunchScreen.storyboard */; };
 		139659C51FEA048300CF7ED0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 139659C41FEA048300CF7ED0 /* main.m */; };
 		56E3E5A65B53CA5F8E904CAD /* libPods-BaseContentAdMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA48E1AFD09C5CC8A4D87EDF /* libPods-BaseContentAdMoney.a */; };
+		B86AE6251FEA66B600EE1FC3 /* VC_MatchSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = B86AE6241FEA66B600EE1FC3 /* VC_MatchSchedule.m */; };
+		B86AE6281FEA66E000EE1FC3 /* VC_GroupTable.m in Sources */ = {isa = PBXBuildFile; fileRef = B86AE6271FEA66E000EE1FC3 /* VC_GroupTable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,10 @@
 		139659C41FEA048300CF7ED0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C54F9F6C7D1596443C805D0 /* Pods-BaseContentAdMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseContentAdMoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseContentAdMoney/Pods-BaseContentAdMoney.release.xcconfig"; sourceTree = "<group>"; };
 		AAB63239C420F7BC290BC660 /* Pods-BaseContentAdMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseContentAdMoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseContentAdMoney/Pods-BaseContentAdMoney.debug.xcconfig"; sourceTree = "<group>"; };
+		B86AE6231FEA66B600EE1FC3 /* VC_MatchSchedule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VC_MatchSchedule.h; sourceTree = "<group>"; };
+		B86AE6241FEA66B600EE1FC3 /* VC_MatchSchedule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VC_MatchSchedule.m; sourceTree = "<group>"; };
+		B86AE6261FEA66E000EE1FC3 /* VC_GroupTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VC_GroupTable.h; sourceTree = "<group>"; };
+		B86AE6271FEA66E000EE1FC3 /* VC_GroupTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VC_GroupTable.m; sourceTree = "<group>"; };
 		EA48E1AFD09C5CC8A4D87EDF /* libPods-BaseContentAdMoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseContentAdMoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,6 +112,10 @@
 				1304AAB21FEA55FA00E99C78 /* ApplicationDataHandler.h */,
 				1304AAB31FEA55FA00E99C78 /* ApplicationDataHandler.m */,
 				139659C31FEA048300CF7ED0 /* Info.plist */,
+				B86AE6231FEA66B600EE1FC3 /* VC_MatchSchedule.h */,
+				B86AE6241FEA66B600EE1FC3 /* VC_MatchSchedule.m */,
+				B86AE6261FEA66E000EE1FC3 /* VC_GroupTable.h */,
+				B86AE6271FEA66E000EE1FC3 /* VC_GroupTable.m */,
 				1304AAB51FEA560500E99C78 /* Supportingfile */,
 			);
 			path = BaseContentAdMoney;
@@ -252,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B86AE6281FEA66E000EE1FC3 /* VC_GroupTable.m in Sources */,
 				139659BA1FEA048300CF7ED0 /* ViewController.m in Sources */,
+				B86AE6251FEA66B600EE1FC3 /* VC_MatchSchedule.m in Sources */,
 				139659C51FEA048300CF7ED0 /* main.m in Sources */,
 				139659B71FEA048300CF7ED0 /* AppDelegate.m in Sources */,
 				1304AAE91FEA69A200E99C78 /* UIColor_EXT.m in Sources */,
