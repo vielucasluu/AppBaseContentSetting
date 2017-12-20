@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor redColor]];
+    [self.view setBackgroundColor:[UIColor yellowColor]];
     [self setTitle:@"SingleView"];
 }
 
