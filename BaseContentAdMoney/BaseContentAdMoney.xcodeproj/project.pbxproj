@@ -12,9 +12,11 @@
 		139659BF1FEA048300CF7ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 139659BE1FEA048300CF7ED0 /* Assets.xcassets */; };
 		139659C21FEA048300CF7ED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 139659C01FEA048300CF7ED0 /* LaunchScreen.storyboard */; };
 		139659C51FEA048300CF7ED0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 139659C41FEA048300CF7ED0 /* main.m */; };
+		56E3E5A65B53CA5F8E904CAD /* libPods-BaseContentAdMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA48E1AFD09C5CC8A4D87EDF /* libPods-BaseContentAdMoney.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1304AAB11FEA54E200E99C78 /* BaseContentAdMoney-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BaseContentAdMoney-Prefix.pch"; sourceTree = "<group>"; };
 		139659B21FEA048300CF7ED0 /* BaseContentAdMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseContentAdMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		139659B51FEA048300CF7ED0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		139659B61FEA048300CF7ED0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -24,6 +26,9 @@
 		139659C11FEA048300CF7ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		139659C31FEA048300CF7ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		139659C41FEA048300CF7ED0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C54F9F6C7D1596443C805D0 /* Pods-BaseContentAdMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseContentAdMoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseContentAdMoney/Pods-BaseContentAdMoney.release.xcconfig"; sourceTree = "<group>"; };
+		AAB63239C420F7BC290BC660 /* Pods-BaseContentAdMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseContentAdMoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseContentAdMoney/Pods-BaseContentAdMoney.debug.xcconfig"; sourceTree = "<group>"; };
+		EA48E1AFD09C5CC8A4D87EDF /* libPods-BaseContentAdMoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseContentAdMoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E3E5A65B53CA5F8E904CAD /* libPods-BaseContentAdMoney.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,8 @@
 			children = (
 				139659B41FEA048300CF7ED0 /* BaseContentAdMoney */,
 				139659B31FEA048300CF7ED0 /* Products */,
+				AFC1B8A8D8AF4906B942CCFA /* Pods */,
+				AE3CDE58FDCEA1F42B86AFE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,8 +72,26 @@
 				139659C01FEA048300CF7ED0 /* LaunchScreen.storyboard */,
 				139659C31FEA048300CF7ED0 /* Info.plist */,
 				139659C41FEA048300CF7ED0 /* main.m */,
+				1304AAB11FEA54E200E99C78 /* BaseContentAdMoney-Prefix.pch */,
 			);
 			path = BaseContentAdMoney;
+			sourceTree = "<group>";
+		};
+		AE3CDE58FDCEA1F42B86AFE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA48E1AFD09C5CC8A4D87EDF /* libPods-BaseContentAdMoney.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFC1B8A8D8AF4906B942CCFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAB63239C420F7BC290BC660 /* Pods-BaseContentAdMoney.debug.xcconfig */,
+				2C54F9F6C7D1596443C805D0 /* Pods-BaseContentAdMoney.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -75,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 139659C81FEA048300CF7ED0 /* Build configuration list for PBXNativeTarget "BaseContentAdMoney" */;
 			buildPhases = (
+				E9855F896D2FD9A14517A270 /* [CP] Check Pods Manifest.lock */,
 				139659AE1FEA048300CF7ED0 /* Sources */,
 				139659AF1FEA048300CF7ED0 /* Frameworks */,
 				139659B01FEA048300CF7ED0 /* Resources */,
+				4B89043A44DB17066E7AD62A /* [CP] Embed Pods Frameworks */,
+				AA588B348C181D980AAD4A06 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +161,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B89043A44DB17066E7AD62A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaseContentAdMoney/Pods-BaseContentAdMoney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA588B348C181D980AAD4A06 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaseContentAdMoney/Pods-BaseContentAdMoney-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9855F896D2FD9A14517A270 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BaseContentAdMoney-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		139659AE1FEA048300CF7ED0 /* Sources */ = {
@@ -264,11 +344,14 @@
 		};
 		139659C91FEA048300CF7ED0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAB63239C420F7BC290BC660 /* Pods-BaseContentAdMoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WAZX495FUE;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BaseContentAdMoney/BaseContentAdMoney-Prefix.pch";
 				INFOPLIST_FILE = BaseContentAdMoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -281,11 +364,14 @@
 		};
 		139659CA1FEA048300CF7ED0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C54F9F6C7D1596443C805D0 /* Pods-BaseContentAdMoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WAZX495FUE;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BaseContentAdMoney/BaseContentAdMoney-Prefix.pch";
 				INFOPLIST_FILE = BaseContentAdMoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
