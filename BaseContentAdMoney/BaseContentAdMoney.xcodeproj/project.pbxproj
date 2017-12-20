@@ -17,6 +17,7 @@
 		56E3E5A65B53CA5F8E904CAD /* libPods-BaseContentAdMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA48E1AFD09C5CC8A4D87EDF /* libPods-BaseContentAdMoney.a */; };
 		B86AE6251FEA66B600EE1FC3 /* VC_MatchSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = B86AE6241FEA66B600EE1FC3 /* VC_MatchSchedule.m */; };
 		B86AE6281FEA66E000EE1FC3 /* VC_GroupTable.m in Sources */ = {isa = PBXBuildFile; fileRef = B86AE6271FEA66E000EE1FC3 /* VC_GroupTable.m */; };
+		B86AE62B1FEA6AB900EE1FC3 /* TC_MatchScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B86AE62A1FEA6AB900EE1FC3 /* TC_MatchScheduleCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		B86AE6241FEA66B600EE1FC3 /* VC_MatchSchedule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VC_MatchSchedule.m; sourceTree = "<group>"; };
 		B86AE6261FEA66E000EE1FC3 /* VC_GroupTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VC_GroupTable.h; sourceTree = "<group>"; };
 		B86AE6271FEA66E000EE1FC3 /* VC_GroupTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VC_GroupTable.m; sourceTree = "<group>"; };
+		B86AE6291FEA6AB900EE1FC3 /* TC_MatchScheduleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TC_MatchScheduleCell.h; sourceTree = "<group>"; };
+		B86AE62A1FEA6AB900EE1FC3 /* TC_MatchScheduleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TC_MatchScheduleCell.m; sourceTree = "<group>"; };
 		EA48E1AFD09C5CC8A4D87EDF /* libPods-BaseContentAdMoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseContentAdMoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +120,8 @@
 				B86AE6261FEA66E000EE1FC3 /* VC_GroupTable.h */,
 				B86AE6271FEA66E000EE1FC3 /* VC_GroupTable.m */,
 				1304AAB51FEA560500E99C78 /* Supportingfile */,
+				B86AE6291FEA6AB900EE1FC3 /* TC_MatchScheduleCell.h */,
+				B86AE62A1FEA6AB900EE1FC3 /* TC_MatchScheduleCell.m */,
 			);
 			path = BaseContentAdMoney;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B86AE6281FEA66E000EE1FC3 /* VC_GroupTable.m in Sources */,
+				B86AE62B1FEA6AB900EE1FC3 /* TC_MatchScheduleCell.m in Sources */,
 				139659BA1FEA048300CF7ED0 /* ViewController.m in Sources */,
 				B86AE6251FEA66B600EE1FC3 /* VC_MatchSchedule.m in Sources */,
 				139659C51FEA048300CF7ED0 /* main.m in Sources */,
