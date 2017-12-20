@@ -18,4 +18,7 @@
 
 @interface ApplicationDataHandler : NSObject
 
++(NSArray*)listTeams;
++(NSArray*)groups;
+
 @end
