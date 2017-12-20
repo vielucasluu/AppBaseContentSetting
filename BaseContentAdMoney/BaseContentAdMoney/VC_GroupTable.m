@@ -112,6 +112,40 @@
                                                     multiplier:1.3
                                                       constant:0.0]];
     
+    UILabel* pointLabel = [[UILabel alloc] init];
+    [pointLabel setTextAlignment:NSTextAlignmentRight];
+    [pointLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [pointLabel setText:@"0 pt"];
+    [cell addSubview:pointLabel];
+    [cell addConstraint:[NSLayoutConstraint constraintWithItem:pointLabel
+                                                     attribute:NSLayoutAttributeTop
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:cell
+                                                     attribute:NSLayoutAttributeTop
+                                                    multiplier:1.0
+                                                      constant:0.0]];
+    [cell addConstraint:[NSLayoutConstraint constraintWithItem:pointLabel
+                                                     attribute:NSLayoutAttributeRight
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:imageView
+                                                     attribute:NSLayoutAttributeLeft
+                                                    multiplier:1.0
+                                                      constant:-10.0]];
+    [cell addConstraint:[NSLayoutConstraint constraintWithItem:pointLabel
+                                                     attribute:NSLayoutAttributeBottom
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:cell
+                                                     attribute:NSLayoutAttributeBottom
+                                                    multiplier:1.0
+                                                      constant:0.0]];
+    [cell addConstraint:[NSLayoutConstraint constraintWithItem:pointLabel
+                                                     attribute:NSLayoutAttributeLeft
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:cell
+                                                     attribute:NSLayoutAttributeLeft
+                                                    multiplier:1.0
+                                                      constant:0.0]];
+    
     return cell;
 }
 
