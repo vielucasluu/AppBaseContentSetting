@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1304AAB41FEA55FA00E99C78 /* ApplicationDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1304AAB31FEA55FA00E99C78 /* ApplicationDataHandler.m */; };
+		1304AABE1FEA59B100E99C78 /* UIColor_EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 1304AABC1FEA59B100E99C78 /* UIColor_EXT.m */; };
 		139659B71FEA048300CF7ED0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 139659B61FEA048300CF7ED0 /* AppDelegate.m */; };
 		139659BA1FEA048300CF7ED0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139659B91FEA048300CF7ED0 /* ViewController.m */; };
 		139659BF1FEA048300CF7ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 139659BE1FEA048300CF7ED0 /* Assets.xcassets */; };
@@ -16,7 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1304AAB11FEA54E200E99C78 /* BaseContentAdMoney-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BaseContentAdMoney-Prefix.pch"; sourceTree = "<group>"; };
+		1304AAB21FEA55FA00E99C78 /* ApplicationDataHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationDataHandler.h; sourceTree = "<group>"; };
+		1304AAB31FEA55FA00E99C78 /* ApplicationDataHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationDataHandler.m; sourceTree = "<group>"; };
+		1304AAB61FEA57F400E99C78 /* BaseContentAdMoney-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseContentAdMoney-Prefix.pch"; sourceTree = "<group>"; };
+		1304AABC1FEA59B100E99C78 /* UIColor_EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIColor_EXT.m; path = BaseContentAdMoney/Extensions/UIColor_EXT/UIColor_EXT.m; sourceTree = SOURCE_ROOT; };
+		1304AABD1FEA59B100E99C78 /* UIColor_EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIColor_EXT.h; path = BaseContentAdMoney/Extensions/UIColor_EXT/UIColor_EXT.h; sourceTree = SOURCE_ROOT; };
 		139659B21FEA048300CF7ED0 /* BaseContentAdMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseContentAdMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		139659B51FEA048300CF7ED0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		139659B61FEA048300CF7ED0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,6 +49,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1304AAB51FEA560500E99C78 /* Supportingfile */ = {
+			isa = PBXGroup;
+			children = (
+				1304AAB61FEA57F400E99C78 /* BaseContentAdMoney-Prefix.pch */,
+				139659BE1FEA048300CF7ED0 /* Assets.xcassets */,
+				139659C01FEA048300CF7ED0 /* LaunchScreen.storyboard */,
+				139659C41FEA048300CF7ED0 /* main.m */,
+			);
+			path = Supportingfile;
+			sourceTree = "<group>";
+		};
+		1304AAB71FEA593B00E99C78 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1304AABB1FEA598100E99C78 /* UIColor_EXT */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1304AABB1FEA598100E99C78 /* UIColor_EXT */ = {
+			isa = PBXGroup;
+			children = (
+				1304AABD1FEA59B100E99C78 /* UIColor_EXT.h */,
+				1304AABC1FEA59B100E99C78 /* UIColor_EXT.m */,
+			);
+			name = UIColor_EXT;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		139659A91FEA048300CF7ED0 = {
 			isa = PBXGroup;
 			children = (
@@ -64,15 +99,15 @@
 		139659B41FEA048300CF7ED0 /* BaseContentAdMoney */ = {
 			isa = PBXGroup;
 			children = (
+				1304AAB71FEA593B00E99C78 /* Extensions */,
 				139659B51FEA048300CF7ED0 /* AppDelegate.h */,
 				139659B61FEA048300CF7ED0 /* AppDelegate.m */,
 				139659B81FEA048300CF7ED0 /* ViewController.h */,
 				139659B91FEA048300CF7ED0 /* ViewController.m */,
-				139659BE1FEA048300CF7ED0 /* Assets.xcassets */,
-				139659C01FEA048300CF7ED0 /* LaunchScreen.storyboard */,
+				1304AAB21FEA55FA00E99C78 /* ApplicationDataHandler.h */,
+				1304AAB31FEA55FA00E99C78 /* ApplicationDataHandler.m */,
 				139659C31FEA048300CF7ED0 /* Info.plist */,
-				139659C41FEA048300CF7ED0 /* main.m */,
-				1304AAB11FEA54E200E99C78 /* BaseContentAdMoney-Prefix.pch */,
+				1304AAB51FEA560500E99C78 /* Supportingfile */,
 			);
 			path = BaseContentAdMoney;
 			sourceTree = "<group>";
@@ -221,6 +256,8 @@
 				139659BA1FEA048300CF7ED0 /* ViewController.m in Sources */,
 				139659C51FEA048300CF7ED0 /* main.m in Sources */,
 				139659B71FEA048300CF7ED0 /* AppDelegate.m in Sources */,
+				1304AABE1FEA59B100E99C78 /* UIColor_EXT.m in Sources */,
+				1304AAB41FEA55FA00E99C78 /* ApplicationDataHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +388,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WAZX495FUE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/BaseContentAdMoney/BaseContentAdMoney-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BaseContentAdMoney/Supportingfile/BaseContentAdMoney-Prefix.pch";
 				INFOPLIST_FILE = BaseContentAdMoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -371,7 +408,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WAZX495FUE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/BaseContentAdMoney/BaseContentAdMoney-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BaseContentAdMoney/Supportingfile/BaseContentAdMoney-Prefix.pch";
 				INFOPLIST_FILE = BaseContentAdMoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

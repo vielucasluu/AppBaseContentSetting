@@ -15,5 +15,6 @@
 @import UIKit;
 
 #import <AFNetworking/AFNetworking.h>
+#import "ApplicationDataHandler.h"
 
 #endif /* BaseContentAdMoney_Prefix_pch */
