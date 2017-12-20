@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1304AAB41FEA55FA00E99C78 /* ApplicationDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1304AAB31FEA55FA00E99C78 /* ApplicationDataHandler.m */; };
-		1304AABE1FEA59B100E99C78 /* UIColor_EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 1304AABC1FEA59B100E99C78 /* UIColor_EXT.m */; };
+		1304AAE91FEA69A200E99C78 /* UIColor_EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 1304AAE71FEA69A200E99C78 /* UIColor_EXT.m */; };
 		139659B71FEA048300CF7ED0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 139659B61FEA048300CF7ED0 /* AppDelegate.m */; };
 		139659BA1FEA048300CF7ED0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139659B91FEA048300CF7ED0 /* ViewController.m */; };
 		139659BF1FEA048300CF7ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 139659BE1FEA048300CF7ED0 /* Assets.xcassets */; };
@@ -21,8 +21,8 @@
 		1304AAB21FEA55FA00E99C78 /* ApplicationDataHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationDataHandler.h; sourceTree = "<group>"; };
 		1304AAB31FEA55FA00E99C78 /* ApplicationDataHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationDataHandler.m; sourceTree = "<group>"; };
 		1304AAB61FEA57F400E99C78 /* BaseContentAdMoney-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseContentAdMoney-Prefix.pch"; sourceTree = "<group>"; };
-		1304AABC1FEA59B100E99C78 /* UIColor_EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIColor_EXT.m; path = BaseContentAdMoney/Extensions/UIColor_EXT/UIColor_EXT.m; sourceTree = SOURCE_ROOT; };
-		1304AABD1FEA59B100E99C78 /* UIColor_EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIColor_EXT.h; path = BaseContentAdMoney/Extensions/UIColor_EXT/UIColor_EXT.h; sourceTree = SOURCE_ROOT; };
+		1304AAE71FEA69A200E99C78 /* UIColor_EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColor_EXT.m; sourceTree = "<group>"; };
+		1304AAE81FEA69A200E99C78 /* UIColor_EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColor_EXT.h; sourceTree = "<group>"; };
 		139659B21FEA048300CF7ED0 /* BaseContentAdMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseContentAdMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		139659B51FEA048300CF7ED0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		139659B61FEA048300CF7ED0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,19 +63,18 @@
 		1304AAB71FEA593B00E99C78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1304AABB1FEA598100E99C78 /* UIColor_EXT */,
+				1304AAE61FEA698C00E99C78 /* UIColor_EXT */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		1304AABB1FEA598100E99C78 /* UIColor_EXT */ = {
+		1304AAE61FEA698C00E99C78 /* UIColor_EXT */ = {
 			isa = PBXGroup;
 			children = (
-				1304AABD1FEA59B100E99C78 /* UIColor_EXT.h */,
-				1304AABC1FEA59B100E99C78 /* UIColor_EXT.m */,
+				1304AAE81FEA69A200E99C78 /* UIColor_EXT.h */,
+				1304AAE71FEA69A200E99C78 /* UIColor_EXT.m */,
 			);
-			name = UIColor_EXT;
-			path = "New Group";
+			path = UIColor_EXT;
 			sourceTree = "<group>";
 		};
 		139659A91FEA048300CF7ED0 = {
@@ -256,7 +255,7 @@
 				139659BA1FEA048300CF7ED0 /* ViewController.m in Sources */,
 				139659C51FEA048300CF7ED0 /* main.m in Sources */,
 				139659B71FEA048300CF7ED0 /* AppDelegate.m in Sources */,
-				1304AABE1FEA59B100E99C78 /* UIColor_EXT.m in Sources */,
+				1304AAE91FEA69A200E99C78 /* UIColor_EXT.m in Sources */,
 				1304AAB41FEA55FA00E99C78 /* ApplicationDataHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,4 +28,10 @@
     return self;
 }
 
+-(void)requestAPIFromSender:(NSObject<ApplicationDataHandlerDelegate>*)sender
+{
+    
+}
+
+
 @end
