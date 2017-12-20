@@ -22,6 +22,7 @@
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [_window setRootViewController:_navController];
     [_window makeKeyAndVisible];
+    sleep(2);
     return YES;
 }
 
