@@ -1,0 +1,11 @@
+BaseContentAdMoney/BaseContentAdMoney.xcworkspace/xcuserdata/*
+*/.DS_Store
+.DS_Store
+*/build/*
+*.pbxuser
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
