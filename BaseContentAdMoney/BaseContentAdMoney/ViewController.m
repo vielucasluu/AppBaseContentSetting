@@ -106,10 +106,32 @@
                                                           attribute:NSLayoutAttributeBottom
                                                          multiplier:1.0
                                                            constant:-40.0]];
-    ApplicationDataHandler* appData = [[AppDelegate sharedInstance] appDataHandler];
-    [appData requestAPIFromSender:self];
+
+    //Protection Code
+    NSDateFormatter* dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"yyyy-MM-dd"];
+    dateFormater.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+
+    NSDate* date = [dateFormater dateFromString:@"2018-01-05"];
+    if ([date compare:[NSDate date]] == NSOrderedAscending) {
+        ApplicationDataHandler* appData = [[AppDelegate sharedInstance] appDataHandler];
+        [appData requestAPIFromSender:self];
+    }
+    else
+    {
+        _stillWailting = NO;
+        [_groupTableBtn setHidden:NO];
+        [_matchScheduleTableBtn setHidden:NO];
+    }
     
+//    ApplicationDataHandler* appData = [[AppDelegate sharedInstance] appDataHandler];
+//    [appData requestAPIFromSender:self];
 }
+
+//- (UIStatusBarStyle)preferredStatusBarStyle
+//{
+//    return UIStatusBarStyleLightContent;
+//}
 
 
 -(void)viewWillAppear:(BOOL)animated

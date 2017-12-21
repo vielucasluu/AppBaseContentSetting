@@ -29,7 +29,7 @@
     [dateFormater setDateFormat:@"yyyy-MM-dd"];
     dateFormater.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
     
-    NSDate* date = [dateFormater dateFromString:@"2018-01-01"];
+    NSDate* date = [dateFormater dateFromString:@"2018-01-05"];
     if ([date compare:[NSDate date]] == NSOrderedAscending) {
         return YES;
     }
@@ -63,11 +63,11 @@
     
     ViewController* singleVC = [[ViewController alloc] init];
     _navController = [[UINavigationController alloc] initWithRootViewController:singleVC];
-    [[_navController navigationBar] setBarTintColor:[UIColor LVL_colorWithHexString:@"222222" andAlpha:1.0]];
+    [[_navController navigationBar] setBarTintColor:[UIColor LVL_colorWithHexString:@"ffffff" andAlpha:1.0]];
     [[_navController navigationBar] setTranslucent:NO];
     [[_navController navigationBar] setTitleTextAttributes:
      @{NSFontAttributeName : [UIFont boldSystemFontOfSize:15]
-       ,NSForegroundColorAttributeName : [UIColor LVL_colorWithHexString:@"ffffff" andAlpha:1.0]}];
+       ,NSForegroundColorAttributeName : [UIColor LVL_colorWithHexString:@"000000" andAlpha:1.0]}];
     // Setup Hamburger Button
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [_window setRootViewController:_navController];

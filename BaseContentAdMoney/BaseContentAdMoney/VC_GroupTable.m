@@ -68,6 +68,12 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
 }
+
+//- (UIStatusBarStyle)preferredStatusBarStyle
+//{
+//    return UIStatusBarStyleBlackOpaque;
+//}
+
 -(void)backButtonTapped
 {
     [self.navigationController popViewControllerAnimated:YES];
