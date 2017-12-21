@@ -18,11 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor blackColor]];
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     
     CGRect frame = self.view.bounds;
-    frame.origin.y = 24;
-    frame.size.height -= 24;
+    frame.origin.y = 20;
+    frame.size.height -= 20;
     
     _webView = [[UIWebView alloc] initWithFrame:frame];
     [self.view addSubview:_webView];
@@ -31,27 +33,29 @@
     [_webView loadRequest:request];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}
+
 -(void)setUrlString:(NSString *)urlString
 {
     _urlString = urlString;
-    NSURL* url = [NSURL URLWithString:urlString];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+    NSURL* url = [NSURL URLWithString:_urlString];
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
     [_webView loadRequest:request];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

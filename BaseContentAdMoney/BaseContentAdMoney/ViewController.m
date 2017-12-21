@@ -24,7 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor redColor]];
     [self setTitle:@"SingleView"];
     _backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [_backgroundView setImage:[UIImage imageNamed:@"background"]];
@@ -137,11 +136,6 @@
     [_matchScheduleTableBtn setHidden:NO];
     [_timer invalidate];
     _timer = nil;
-}
-
--(void)callWeb:(NSString*)urlStr
-{
-    
 }
 
 #pragma mark - ApplicationDataHandlerDelegate
