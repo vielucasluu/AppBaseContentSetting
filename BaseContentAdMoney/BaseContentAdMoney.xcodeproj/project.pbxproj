@@ -26,6 +26,7 @@
 		1304AAB61FEA57F400E99C78 /* BaseContentAdMoney-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseContentAdMoney-Prefix.pch"; sourceTree = "<group>"; };
 		1304AAE71FEA69A200E99C78 /* UIColor_EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColor_EXT.m; sourceTree = "<group>"; };
 		1304AAE81FEA69A200E99C78 /* UIColor_EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColor_EXT.h; sourceTree = "<group>"; };
+		1304AAEA1FEA805800E99C78 /* BaseContentAdMoney.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BaseContentAdMoney.entitlements; sourceTree = "<group>"; };
 		139659B21FEA048300CF7ED0 /* BaseContentAdMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseContentAdMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		139659B51FEA048300CF7ED0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		139659B61FEA048300CF7ED0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 		139659B41FEA048300CF7ED0 /* BaseContentAdMoney */ = {
 			isa = PBXGroup;
 			children = (
+				1304AAEA1FEA805800E99C78 /* BaseContentAdMoney.entitlements */,
 				1304AAB71FEA593B00E99C78 /* Extensions */,
 				139659B51FEA048300CF7ED0 /* AppDelegate.h */,
 				139659B61FEA048300CF7ED0 /* AppDelegate.m */,
@@ -178,6 +180,11 @@
 					139659B11FEA048300CF7ED0 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -401,6 +408,7 @@
 			baseConfigurationReference = AAB63239C420F7BC290BC660 /* Pods-BaseContentAdMoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BaseContentAdMoney/BaseContentAdMoney.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WAZX495FUE;
@@ -421,6 +429,7 @@
 			baseConfigurationReference = 2C54F9F6C7D1596443C805D0 /* Pods-BaseContentAdMoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BaseContentAdMoney/BaseContentAdMoney.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WAZX495FUE;
