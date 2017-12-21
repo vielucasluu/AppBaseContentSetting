@@ -17,8 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     ViewController* singleVC = [[ViewController alloc] init];
     _navController = [[UINavigationController alloc] initWithRootViewController:singleVC];
+    [[_navController navigationBar]setBarTintColor:[UIColor LVL_colorWithHexString:@"222222" andAlpha:1.0]];
+    [[_navController navigationBar]setTranslucent:NO];
+    [[_navController navigationBar]setTitleTextAttributes:
+     @{NSFontAttributeName : [UIFont boldSystemFontOfSize:15]
+       ,NSForegroundColorAttributeName : [UIColor LVL_colorWithHexString:@"ffffff" andAlpha:1.0]}];
+    // Setup Hamburger Button
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [_window setRootViewController:_navController];
     [_window makeKeyAndVisible];

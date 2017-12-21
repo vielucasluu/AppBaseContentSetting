@@ -110,7 +110,6 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
 }
-
 -(void)groupButtonTapped
 {
     VC_GroupTable* groupVC = [[VC_GroupTable alloc] init];
