@@ -23,6 +23,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    
+    //Protection Code
+    NSDateFormatter* dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"yyyy-MM-dd"];
+    dateFormater.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    
+    NSDate* date = [dateFormater dateFromString:@"2018-01-01"];
+    if ([date compare:[NSDate date]] == NSOrderedAscending) {
+        return YES;
+    }
+    
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
@@ -45,10 +56,6 @@
                           channel:@"App Store"
                  apsForProduction:YES
             advertisingIdentifier:advertisingId];
-    
-    
-    
-    
     
     
     

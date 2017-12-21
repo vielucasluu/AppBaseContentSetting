@@ -18,8 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
-    _webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    [self.view setBackgroundColor:[UIColor blackColor]];
+    
+    CGRect frame = self.view.bounds;
+    frame.origin.y = 24;
+    frame.size.height -= 24;
+    
+    _webView = [[UIWebView alloc] initWithFrame:frame];
     [self.view addSubview:_webView];
     NSURL* url = [NSURL URLWithString:_urlString];
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
