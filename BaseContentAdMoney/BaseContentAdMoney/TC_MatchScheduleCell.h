@@ -17,6 +17,5 @@
 @property (strong, nonatomic) UILabel*          team1Score;
 @property (strong, nonatomic) UILabel*          team2Score;
 @property (strong, nonatomic) UILabel*          startTime;
-
-
+@property (strong, nonatomic) UIImageView*      backgroundCellView;
 @end

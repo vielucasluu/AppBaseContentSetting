@@ -9,48 +9,45 @@
 #import "TC_MatchScheduleCell.h"
 
 @implementation TC_MatchScheduleCell
-{
-    UIImageView* _backgroundView;
-}
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self.layer setMasksToBounds:YES];
-        _backgroundView = [[UIImageView alloc] init];
-        [_backgroundView setImage:[UIImage imageNamed:@"rowBackground"]];
-        [_backgroundView setContentMode:UIViewContentModeScaleAspectFill];
-        [_backgroundView setTranslatesAutoresizingMaskIntoConstraints:NO];
-        [self addSubview:_backgroundView];
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:_backgroundView
-                                                              attribute:NSLayoutAttributeTop
-                                                              relatedBy:NSLayoutRelationEqual
-                                                                 toItem:self
-                                                              attribute:NSLayoutAttributeTop
-                                                             multiplier:1.0
-                                                               constant:0.0]];
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:_backgroundView
-                                                              attribute:NSLayoutAttributeCenterX
-                                                              relatedBy:NSLayoutRelationEqual
-                                                                 toItem:self
-                                                              attribute:NSLayoutAttributeCenterX
-                                                             multiplier:1.0
-                                                               constant:0.0]];
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:_backgroundView
-                                                              attribute:NSLayoutAttributeWidth
-                                                              relatedBy:NSLayoutRelationEqual
-                                                                 toItem:self
-                                                              attribute:NSLayoutAttributeWidth
-                                                             multiplier:1.0
-                                                               constant:0.0]];
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:_backgroundView
-                                                              attribute:NSLayoutAttributeBottom
-                                                              relatedBy:NSLayoutRelationEqual
-                                                                 toItem:self
-                                                              attribute:NSLayoutAttributeBottom
-                                                             multiplier:1.0
-                                                               constant:0.0]];
+        _backgroundCellView = [[UIImageView alloc] init];
+        [_backgroundCellView setImage:[UIImage imageNamed:@"rowBackground"]];
+        [_backgroundCellView setContentMode:UIViewContentModeScaleAspectFill];
+        [_backgroundCellView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self addSubview:_backgroundCellView];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:_backgroundCellView
+                                                         attribute:NSLayoutAttributeTop
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:self
+                                                         attribute:NSLayoutAttributeTop
+                                                        multiplier:1.0
+                                                          constant:0.0]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:_backgroundCellView
+                                                         attribute:NSLayoutAttributeCenterX
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:self
+                                                         attribute:NSLayoutAttributeCenterX
+                                                        multiplier:1.0
+                                                          constant:0.0]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:_backgroundCellView
+                                                         attribute:NSLayoutAttributeWidth
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:self
+                                                         attribute:NSLayoutAttributeWidth
+                                                        multiplier:1.0
+                                                          constant:0.0]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:_backgroundCellView
+                                                         attribute:NSLayoutAttributeBottom
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:self
+                                                         attribute:NSLayoutAttributeBottom
+                                                        multiplier:1.0
+                                                          constant:0.0]];
         
         _team1ImageView = [[UIImageView alloc] init];
         [_team1ImageView setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -269,7 +266,7 @@
         
         _startTime = [[UILabel alloc] init];
         [_startTime setText:@"16:00"];
-//        [_startTime setBackgroundColor:[UIColor LVL_colorWithHexString:@"3a3a3a" andAlpha:0.3]];
+        //        [_startTime setBackgroundColor:[UIColor LVL_colorWithHexString:@"3a3a3a" andAlpha:0.3]];
         [_startTime setTextAlignment:NSTextAlignmentCenter];
         [_startTime setTextColor:[UIColor whiteColor]];
         [_startTime setFont:[UIFont boldSystemFontOfSize:15]];

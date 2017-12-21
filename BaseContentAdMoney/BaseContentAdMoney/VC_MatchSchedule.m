@@ -96,13 +96,58 @@
     {
         return @"June 28, 2018";
     }
-    else
+    else if (section == 15)
+    {
         return @"June 29, 2018";
+    }
+    else if (section == 16)
+    {
+        return @"June 30, 2018";
+    }
+    else if (section == 17)
+    {
+        return @"July 1, 2018";
+    }
+    else if (section == 18)
+    {
+        return @"July 2, 2018";
+    }
+    else if (section == 19)
+    {
+        return @"July 3, 2018";
+    }
+    else if (section == 20)
+    {
+        return @"July 4, 2018";
+    }
+    else if (section == 21)
+    {
+        return @"July 6, 2018";
+    }
+    else if (section == 22)
+    {
+        return @"July 7, 2018";
+    }
+    else if (section == 23)
+    {
+        return @"July 8, 2018";
+    }
+    else if (section == 24)
+    {
+        return @"July 11, 2018";
+    }
+    else if (section == 25)
+    {
+        return @"July 14, 2018";
+    }
+    else
+        return @"June 15, 2018";
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 16;
+    return 27;
 }
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     switch (section) {
@@ -151,9 +196,43 @@
         case 14:
             return 4;
             break;
+        case 15:
+            return 2;
+            break;
+        case 16:
+            return 1;
+            break;
+        case 17:
+            return 2;
+            break;
+        case 18:
+            return 2;
+            break;
+        case 19:
+            return 2;
+            break;
+        case 20:
+            return 1;
+            break;
+        case 21:
+            return 1;
+            break;
+        case 22:
+            return 2;
+            break;
+        case 23:
+            return 1;
+            break;
+        case 24:
+            return 2;
+            break;
+        case 25:
+            return 1;
+            break;
+            
             
         default:
-            return 2;
+            return 1;
             break;
     }
 }
@@ -167,6 +246,7 @@
     if (!cell) {
         cell = [[TC_MatchScheduleCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"scheduleCell"];
     }
+    [cell.backgroundCellView setImage:[UIImage imageNamed:@"rowBackground"]];
     if (indexPath.section == 0)
     {
         if (indexPath.row == 0) {
@@ -589,7 +669,7 @@
             [cell.team2ImageView setImage:[UIImage imageNamed:@"Colombia"]];
         }
     }
-    else
+    else if (indexPath.section == 15)
     {
         if (indexPath.row == 0)
         {
@@ -606,6 +686,178 @@
             [cell.startTime setText:@"1:00 AM"];
             [cell.team1ImageView setImage:[UIImage imageNamed:@"Panama"]];
             [cell.team2ImageView setImage:[UIImage imageNamed:@"Tunisia"]];
+        }
+    }
+    else if (indexPath.section == 16)
+    {
+        [cell.backgroundCellView setImage:[UIImage imageNamed:@"semiCell"]];
+        if (indexPath.row == 0)
+        {
+            [cell.team1Name setText:@"[1 C]"];
+            [cell.team2Name setText:@"[2 D]"];
+            [cell.startTime setText:@"9:00 PM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+    }
+    else if (indexPath.section == 17)
+    {
+        [cell.backgroundCellView setImage:[UIImage imageNamed:@"semiCell"]];
+        if (indexPath.row == 0)
+        {
+            [cell.team1Name setText:@"[1 C]"];
+            [cell.team2Name setText:@"[2 D]"];
+            [cell.startTime setText:@"1:00 AM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+        else if (indexPath.row == 1)
+        {
+            [cell.team1Name setText:@"[1 A]"];
+            [cell.team2Name setText:@"[2 B]"];
+            [cell.startTime setText:@"9:00 PM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+    }
+    else if (indexPath.section == 18)
+    {
+        [cell.backgroundCellView setImage:[UIImage imageNamed:@"semiCell"]];
+        if (indexPath.row == 0)
+        {
+            [cell.team1Name setText:@"[1 D]"];
+            [cell.team2Name setText:@"[2 C]"];
+            [cell.startTime setText:@"1:00 AM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+        else if (indexPath.row == 1)
+        {
+            [cell.team1Name setText:@"[1 E]"];
+            [cell.team2Name setText:@"[2 F]"];
+            [cell.startTime setText:@"9:00 PM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+    }
+    else if (indexPath.section == 19)
+    {
+        [cell.backgroundCellView setImage:[UIImage imageNamed:@"semiCell"]];
+        if (indexPath.row == 0)
+        {
+            [cell.team1Name setText:@"[1 G]"];
+            [cell.team2Name setText:@"[2 H]"];
+            [cell.startTime setText:@"1:00 AM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+        else if (indexPath.row == 1)
+        {
+            [cell.team1Name setText:@"[1 F]"];
+            [cell.team2Name setText:@"[2 E]"];
+            [cell.startTime setText:@"9:00 PM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+    }
+    else if (indexPath.section == 20)
+    {
+        [cell.backgroundCellView setImage:[UIImage imageNamed:@"semiCell"]];
+        if (indexPath.row == 0)
+        {
+            [cell.team1Name setText:@"[1 H]"];
+            [cell.team2Name setText:@"[2 G]"];
+            [cell.startTime setText:@"1:00 AM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+    }
+    else if (indexPath.section == 21)
+    {
+        [cell.backgroundCellView setImage:[UIImage imageNamed:@"semiCell"]];
+        if (indexPath.row == 0)
+        {
+            [cell.team1Name setText:@"???"];
+            [cell.team2Name setText:@"???"];
+            [cell.startTime setText:@"9:00 PM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+    }
+    else if (indexPath.section == 22)
+    {
+        [cell.backgroundCellView setImage:[UIImage imageNamed:@"semiCell"]];
+        if (indexPath.row == 0)
+        {
+            [cell.team1Name setText:@"???"];
+            [cell.team2Name setText:@"???"];
+            [cell.startTime setText:@"1:00 AM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+        else if (indexPath.row == 1)
+        {
+            [cell.team1Name setText:@"???"];
+            [cell.team2Name setText:@"???"];
+            [cell.startTime setText:@"9:00 PM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+    }
+    else if (indexPath.section == 23)
+    {
+        [cell.backgroundCellView setImage:[UIImage imageNamed:@"semiCell"]];
+        if (indexPath.row == 0)
+        {
+            [cell.team1Name setText:@"???"];
+            [cell.team2Name setText:@"???"];
+            [cell.startTime setText:@"1:00 AM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+    }
+    else if (indexPath.section == 24)
+    {
+        [cell.backgroundCellView setImage:[UIImage imageNamed:@"semiCell"]];
+        if (indexPath.row == 0)
+        {
+            [cell.team1Name setText:@"???"];
+            [cell.team2Name setText:@"???"];
+            [cell.startTime setText:@"1:00 AM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+        else if (indexPath.row == 1)
+        {
+            [cell.team1Name setText:@"???"];
+            [cell.team2Name setText:@"???"];
+            [cell.startTime setText:@"1:00 PM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+    }
+    else if (indexPath.section == 25)
+    {
+        if (indexPath.row == 0)
+        {
+            [cell.backgroundCellView setImage:[UIImage imageNamed:@"silverCell"]];
+            [cell.team1Name setText:@"???"];
+            [cell.team2Name setText:@"???"];
+            [cell.startTime setText:@"1:00 AM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+        }
+    }
+    else
+    {
+        if (indexPath.row == 0)
+        {
+            [cell.backgroundCellView setImage:[UIImage imageNamed:@"goldenCell"]];
+            [cell.team1Name setText:@"???"];
+            [cell.team2Name setText:@"???"];
+            [cell.startTime setText:@"1:00 AM"];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"unknowFlag"]];
         }
     }
     
