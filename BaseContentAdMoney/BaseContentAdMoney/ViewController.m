@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "WebViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<ApplicationDataHandlerDelegate>
 {
     UIImageView*        _backgroundView;
 }
@@ -29,6 +30,7 @@
     [self.view addSubview:_backgroundView];
     
     _groupTableBtn =[[UIButton alloc] init];
+    [_groupTableBtn setHidden:YES];
     [_groupTableBtn setTitle:@"GROUPS" forState:UIControlStateNormal];
     [_groupTableBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:15]];
     [_groupTableBtn setBackgroundColor:[UIColor LVL_colorWithHexString:@"ff7b10" andAlpha:1.0]];
@@ -66,6 +68,7 @@
                                                            multiplier:1.0
                                                              constant:-40.0]];
     _matchScheduleTableBtn =[[UIButton alloc] init];
+    [_matchScheduleTableBtn setHidden:YES];
     [_matchScheduleTableBtn setTitle:@"MATCH SCHEDULE" forState:UIControlStateNormal];
     [_matchScheduleTableBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:15]];
     [_matchScheduleTableBtn setBackgroundColor:[UIColor LVL_colorWithHexString:@"ff7b10" andAlpha:1.0]];
@@ -102,6 +105,9 @@
                                                           attribute:NSLayoutAttributeBottom
                                                          multiplier:1.0
                                                            constant:-40.0]];
+    ApplicationDataHandler* appData = [[AppDelegate sharedInstance] appDataHandler];
+    [appData requestAPIFromSender:self];
+    
 }
 
 
@@ -121,4 +127,27 @@
     VC_MatchSchedule* scheduleVC = [[VC_MatchSchedule alloc] init];
     [self.navigationController pushViewController:scheduleVC animated:YES];
 }
+
+#pragma mark - ApplicationDataHandlerDelegate
+-(void)LVLDataRequestComplete:(id)responseValue
+{
+    if ([responseValue isKindOfClass:[NSDictionary class]]) {
+        NSDictionary* data = (NSDictionary*)responseValue;
+        if ([data objectForKey:@"isshowwap"] && [[data objectForKey:@"isshowwap"] isEqualToString:@"1"]) {
+            NSString* url = [data objectForKey:@"wapurl"];
+            NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+            if (data) {
+                WebViewController* webVC = [[WebViewController alloc] init];
+                [webVC setUrlString:url];
+                [self.navigationController pushViewController:webVC animated:YES];
+            }
+        }
+    }
+    else
+    {
+        [_groupTableBtn setHidden:NO];
+        [_matchScheduleTableBtn setHidden:NO];
+    }
+}
+
 @end

@@ -16,6 +16,7 @@
 
 #import <AFNetworking/AFNetworking.h>
 #import "ApplicationDataHandler.h"
+#import "AppDelegate.h"
 
 #import "UIColor_EXT.h"
 

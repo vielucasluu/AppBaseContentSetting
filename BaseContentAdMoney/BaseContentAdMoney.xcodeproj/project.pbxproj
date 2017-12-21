@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		130293501FEB9B7000E25034 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1302934F1FEB9B7000E25034 /* WebViewController.m */; };
 		1304AAB41FEA55FA00E99C78 /* ApplicationDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1304AAB31FEA55FA00E99C78 /* ApplicationDataHandler.m */; };
 		1304AAE91FEA69A200E99C78 /* UIColor_EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 1304AAE71FEA69A200E99C78 /* UIColor_EXT.m */; };
 		139659B71FEA048300CF7ED0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 139659B61FEA048300CF7ED0 /* AppDelegate.m */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1302934E1FEB9B7000E25034 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		1302934F1FEB9B7000E25034 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		1304AAB21FEA55FA00E99C78 /* ApplicationDataHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationDataHandler.h; sourceTree = "<group>"; };
 		1304AAB31FEA55FA00E99C78 /* ApplicationDataHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationDataHandler.m; sourceTree = "<group>"; };
 		1304AAB61FEA57F400E99C78 /* BaseContentAdMoney-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseContentAdMoney-Prefix.pch"; sourceTree = "<group>"; };
@@ -108,8 +111,8 @@
 		139659B41FEA048300CF7ED0 /* BaseContentAdMoney */ = {
 			isa = PBXGroup;
 			children = (
-				1304AAEA1FEA805800E99C78 /* BaseContentAdMoney.entitlements */,
 				1304AAB71FEA593B00E99C78 /* Extensions */,
+				1304AAEA1FEA805800E99C78 /* BaseContentAdMoney.entitlements */,
 				139659B51FEA048300CF7ED0 /* AppDelegate.h */,
 				139659B61FEA048300CF7ED0 /* AppDelegate.m */,
 				139659B81FEA048300CF7ED0 /* ViewController.h */,
@@ -124,6 +127,8 @@
 				1304AAB51FEA560500E99C78 /* Supportingfile */,
 				B86AE6291FEA6AB900EE1FC3 /* TC_MatchScheduleCell.h */,
 				B86AE62A1FEA6AB900EE1FC3 /* TC_MatchScheduleCell.m */,
+				1302934E1FEB9B7000E25034 /* WebViewController.h */,
+				1302934F1FEB9B7000E25034 /* WebViewController.m */,
 			);
 			path = BaseContentAdMoney;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				B86AE62B1FEA6AB900EE1FC3 /* TC_MatchScheduleCell.m in Sources */,
 				139659BA1FEA048300CF7ED0 /* ViewController.m in Sources */,
 				B86AE6251FEA66B600EE1FC3 /* VC_MatchSchedule.m in Sources */,
+				130293501FEB9B7000E25034 /* WebViewController.m in Sources */,
 				139659C51FEA048300CF7ED0 /* main.m in Sources */,
 				139659B71FEA048300CF7ED0 /* AppDelegate.m in Sources */,
 				1304AAE91FEA69A200E99C78 /* UIColor_EXT.m in Sources */,

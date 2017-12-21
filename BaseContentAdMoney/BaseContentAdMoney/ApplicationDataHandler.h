@@ -18,6 +18,8 @@
 
 @interface ApplicationDataHandler : NSObject
 
+-(void)requestAPIFromSender:(NSObject<ApplicationDataHandlerDelegate>*)sender;
+
 +(NSArray*)listTeams;
 +(NSArray*)groups;
 

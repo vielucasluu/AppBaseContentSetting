@@ -15,9 +15,16 @@
 
 @implementation AppDelegate
 
++(AppDelegate *)sharedInstance
+{
+    return (AppDelegate*)[[UIApplication sharedApplication] delegate];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    _appDataHandler = [[ApplicationDataHandler alloc] init];
+    
     ViewController* singleVC = [[ViewController alloc] init];
     _navController = [[UINavigationController alloc] initWithRootViewController:singleVC];
     [[_navController navigationBar]setBarTintColor:[UIColor LVL_colorWithHexString:@"222222" andAlpha:1.0]];
@@ -29,7 +36,6 @@
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [_window setRootViewController:_navController];
     [_window makeKeyAndVisible];
-    sleep(2);
     return YES;
 }
 
