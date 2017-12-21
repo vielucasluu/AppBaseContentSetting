@@ -295,7 +295,7 @@
             [cell.team2Name setText:@"Saudi Arabia"];
             [cell.startTime setText:@"10:00 PM"];
             [cell.team1ImageView setImage:[UIImage imageNamed:@"Russia"]];
-            [cell.team2ImageView setImage:[UIImage imageNamed:@"SaudiArabia"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"Saudi Arabia"]];
         }
     }
     else if (indexPath.section == 1)
@@ -367,7 +367,7 @@
             [cell.team1Name setText:@"Costa Rica"];
             [cell.team2Name setText:@"Serbia"];
             [cell.startTime setText:@"7:00 PM"];
-            [cell.team1ImageView setImage:[UIImage imageNamed:@"CostaRica"]];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"Costa Rica"]];
             [cell.team2ImageView setImage:[UIImage imageNamed:@"Serbia"]];
         }
         else if (indexPath.row == 2)
@@ -395,7 +395,7 @@
             [cell.team2Name setText:@"South Korea"];
             [cell.startTime setText:@"7:00 PM"];
             [cell.team1ImageView setImage:[UIImage imageNamed:@"Sweden"]];
-            [cell.team2ImageView setImage:[UIImage imageNamed:@"SouthKorea"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"South Korea"]];
         }
         else if (indexPath.row == 2)
         {
@@ -459,7 +459,7 @@
             [cell.team2Name setText:@"Saudi Arabia"];
             [cell.startTime setText:@"10:00 PM"];
             [cell.team1ImageView setImage:[UIImage imageNamed:@"Uruguay"]];
-            [cell.team2ImageView setImage:[UIImage imageNamed:@"SaudiArabia"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"Saudi Arabia"]];
         }
     }
     else if (indexPath.section == 7)
@@ -506,7 +506,7 @@
             [cell.team2Name setText:@"Costa Rica"];
             [cell.startTime setText:@"7:00 PM"];
             [cell.team1ImageView setImage:[UIImage imageNamed:@"Brazil"]];
-            [cell.team2ImageView setImage:[UIImage imageNamed:@"CostaRica"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"Costa Rica"]];
             
         }
         else if (indexPath.row == 2)
@@ -542,7 +542,7 @@
             [cell.team1Name setText:@"South Korea"];
             [cell.team2Name setText:@"Mexico"];
             [cell.startTime setText:@"10:00 PM"];
-            [cell.team1ImageView setImage:[UIImage imageNamed:@"SouthKorea"]];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"South Korea"]];
             [cell.team2ImageView setImage:[UIImage imageNamed:@"Mexico"]];
         }
     }
@@ -598,7 +598,7 @@
             [cell.team1Name setText:@"Saudi Arabia"];
             [cell.team2Name setText:@"Egypt"];
             [cell.startTime setText:@"9:00 PM"];
-            [cell.team1ImageView setImage:[UIImage imageNamed:@"SaudiArabia"]];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"Saudi Arabia"]];
             [cell.team2ImageView setImage:[UIImage imageNamed:@"Egypt"]];
         }
     }
@@ -670,7 +670,7 @@
             [cell.team1Name setText:@"South Korea"];
             [cell.team2Name setText:@"Germany"];
             [cell.startTime setText:@"9:00 PM"];
-            [cell.team1ImageView setImage:[UIImage imageNamed:@"SouthKorea"]];
+            [cell.team1ImageView setImage:[UIImage imageNamed:@"South Korea"]];
             [cell.team2ImageView setImage:[UIImage imageNamed:@"Germany"]];
         }
     }
@@ -690,7 +690,7 @@
             [cell.team2Name setText:@"Costa Rica"];
             [cell.startTime setText:@"1:00 AM"];
             [cell.team1ImageView setImage:[UIImage imageNamed:@"Switzerland"]];
-            [cell.team2ImageView setImage:[UIImage imageNamed:@"CostaRica"]];
+            [cell.team2ImageView setImage:[UIImage imageNamed:@"Costa Rica"]];
             
         }
         else if (indexPath.row == 2)

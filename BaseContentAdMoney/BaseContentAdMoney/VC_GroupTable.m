@@ -115,8 +115,42 @@
 {
     UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     
+    UIImageView* backgroundView = [[UIImageView alloc] initWithFrame:cell.bounds];
+    [backgroundView setImage: [UIImage imageNamed:@"silverCell"]];
+    [cell setBackgroundView:backgroundView];
+    
     NSArray* groups = [[ApplicationDataHandler groups] objectAtIndex:indexPath.section];
     [cell.textLabel setText:[groups objectAtIndex:indexPath.row]];
+    [cell.textLabel setTextColor:[UIColor whiteColor]];
+    
+//    [cell addConstraint:[NSLayoutConstraint constraintWithItem:imageView
+//                                                     attribute:NSLayoutAttributeTop
+//                                                     relatedBy:NSLayoutRelationEqual
+//                                                        toItem:cell
+//                                                     attribute:NSLayoutAttributeTop
+//                                                    multiplier:1.0
+//                                                      constant:0.0]];
+//    [cell addConstraint:[NSLayoutConstraint constraintWithItem:imageView
+//                                                     attribute:NSLayoutAttributeRight
+//                                                     relatedBy:NSLayoutRelationEqual
+//                                                        toItem:cell
+//                                                     attribute:NSLayoutAttributeRight
+//                                                    multiplier:1.0
+//                                                      constant:0.0]];
+//    [cell addConstraint:[NSLayoutConstraint constraintWithItem:imageView
+//                                                     attribute:NSLayoutAttributeBottom
+//                                                     relatedBy:NSLayoutRelationEqual
+//                                                        toItem:cell
+//                                                     attribute:NSLayoutAttributeBottom
+//                                                    multiplier:1.0
+//                                                      constant:0.0]];
+//    [cell addConstraint:[NSLayoutConstraint constraintWithItem:imageView
+//                                                     attribute:NSLayoutAttributeWidth
+//                                                     relatedBy:NSLayoutRelationEqual
+//                                                        toItem:cell
+//                                                     attribute:NSLayoutAttributeHeight
+//                                                    multiplier:1.3
+//                                                      constant:0.0]];
     
     UIImageView* imageView = [[UIImageView alloc] init];
     [imageView setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -153,6 +187,7 @@
     
     UILabel* pointLabel = [[UILabel alloc] init];
     [pointLabel setTextAlignment:NSTextAlignmentRight];
+    [pointLabel setTextColor:[UIColor whiteColor]];
     [pointLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [pointLabel setText:@"0 pt"];
     [cell addSubview:pointLabel];
