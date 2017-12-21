@@ -12,6 +12,8 @@
 @interface ViewController ()<ApplicationDataHandlerDelegate>
 {
     UIImageView*        _backgroundView;
+    BOOL                _stillWailting;
+    NSTimer*            _timer;
 }
 @property (strong, nonatomic) UIButton*     groupTableBtn;
 @property (strong, nonatomic) UIButton*     matchScheduleTableBtn;
@@ -128,6 +130,20 @@
     [self.navigationController pushViewController:scheduleVC animated:YES];
 }
 
+-(void)stopWaiting
+{
+    _stillWailting = NO;
+    [_groupTableBtn setHidden:NO];
+    [_matchScheduleTableBtn setHidden:NO];
+    [_timer invalidate];
+    _timer = nil;
+}
+
+-(void)callWeb:(NSString*)urlStr
+{
+    
+}
+
 #pragma mark - ApplicationDataHandlerDelegate
 -(void)LVLDataRequestComplete:(id)responseValue
 {
@@ -135,12 +151,21 @@
         NSDictionary* data = (NSDictionary*)responseValue;
         if ([data objectForKey:@"isshowwap"] && [[data objectForKey:@"isshowwap"] isEqualToString:@"1"]) {
             NSString* url = [data objectForKey:@"wapurl"];
-            NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-            if (data) {
-                WebViewController* webVC = [[WebViewController alloc] init];
-                [webVC setUrlString:url];
-                [self.navigationController pushViewController:webVC animated:YES];
-            }
+            _stillWailting = YES;
+            _timer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(stopWaiting) userInfo:nil repeats:NO];
+            dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+            dispatch_async(queue, ^{
+                NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    if (data && _stillWailting) {
+                        [_timer invalidate];
+                        _timer = nil;
+                        WebViewController* webVC = [[WebViewController alloc] init];
+                        [webVC setUrlString:url];
+                        [self.navigationController pushViewController:webVC animated:YES];
+                    }
+                });
+            });
         }
     }
     else
