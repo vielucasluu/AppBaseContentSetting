@@ -8,6 +8,7 @@
 
 #import "VC_MatchSchedule.h"
 #import "TC_MatchScheduleCell.h"
+#import "SoccerBorad.h"
 
 @interface VC_MatchSchedule ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -22,14 +23,20 @@
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
         self.edgesForExtendedLayout = UIRectEdgeNone;
     [self setTitle:@"Schedule"];
-    [self.view setBackgroundColor:[UIColor redColor]];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     
     UIImage *backImage = [[UIImage imageNamed:@"backImage"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *leftBtn = leftBtn = [[UIBarButtonItem alloc] initWithImage:backImage
+    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc] initWithImage:backImage
                                                                           style:UIBarButtonItemStyleDone
                                                                          target:self
                                                                          action:@selector(backButtonTapped)];
     self.navigationItem.leftBarButtonItem = leftBtn;
+    
+    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"Refresh"
+                                                                 style:UIBarButtonItemStyleDone
+                                                                target:self
+                                                                action:@selector(rightBarButtonTapped)];
+    self.navigationItem.rightBarButtonItem = rightBtn;
     
     _tableView = [[UITableView alloc]init];
     [_tableView setDelegate:self];
@@ -82,6 +89,30 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+-(void)rightBarButtonTapped
+{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Updated"
+                                                                   message:@"No one match will become in short time, please wait until June 14, 2018 with match of Russia and Saudi Arabia. Try follow your favorite team in Group Page"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+                                                         [alert dismissViewControllerAnimated:YES completion:nil];
+                                                     }];
+//    UIAlertAction* gotoGroupPage = [UIAlertAction actionWithTitle:@"Go to Group page"
+//                                                            style:UIAlertActionStyleDefault
+//                                                          handler:^(UIAlertAction * _Nonnull action) {
+//                                                              [alert dismissViewControllerAnimated:YES completion:nil];
+//                                                              [self.navigationController popViewControllerAnimated:YES];
+//                                                              VC_GroupTable* groupVC = [[VC_GroupTable alloc] init];
+//                                                              [self.navigationController pushViewController:groupVC animated:YES];
+//                                                          }];
+    [alert addAction:okAction];
+//    [alert addAction:gotoGroupPage];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+                                 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     if (section == 0) {
@@ -911,4 +942,13 @@
     
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    SoccerBorad* soccerBoradVC = [[SoccerBorad alloc] init];
+//    soccerBoradVC s
+    [self.navigationController pushViewController:soccerBoradVC animated:YES];
+}
+
 @end

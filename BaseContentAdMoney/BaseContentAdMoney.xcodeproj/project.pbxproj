@@ -10,6 +10,9 @@
 		130293501FEB9B7000E25034 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1302934F1FEB9B7000E25034 /* WebViewController.m */; };
 		1304AAB41FEA55FA00E99C78 /* ApplicationDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1304AAB31FEA55FA00E99C78 /* ApplicationDataHandler.m */; };
 		1304AAE91FEA69A200E99C78 /* UIColor_EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 1304AAE71FEA69A200E99C78 /* UIColor_EXT.m */; };
+		1361F5F1200758D000939F7A /* SoccerBorad.m in Sources */ = {isa = PBXBuildFile; fileRef = 1361F5F0200758D000939F7A /* SoccerBorad.m */; };
+		1361F5F52007597D00939F7A /* VC_MainPageHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 1361F5F42007597D00939F7A /* VC_MainPageHome.m */; };
+		13897BEA20061E0C009017A2 /* VC_FavoriteTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = 13897BE920061E0C009017A2 /* VC_FavoriteTeam.m */; };
 		139659B71FEA048300CF7ED0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 139659B61FEA048300CF7ED0 /* AppDelegate.m */; };
 		139659BA1FEA048300CF7ED0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 139659B91FEA048300CF7ED0 /* ViewController.m */; };
 		139659BF1FEA048300CF7ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 139659BE1FEA048300CF7ED0 /* Assets.xcassets */; };
@@ -30,6 +33,12 @@
 		1304AAE71FEA69A200E99C78 /* UIColor_EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColor_EXT.m; sourceTree = "<group>"; };
 		1304AAE81FEA69A200E99C78 /* UIColor_EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColor_EXT.h; sourceTree = "<group>"; };
 		1304AAEA1FEA805800E99C78 /* BaseContentAdMoney.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BaseContentAdMoney.entitlements; sourceTree = "<group>"; };
+		1361F5EF200758D000939F7A /* SoccerBorad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoccerBorad.h; sourceTree = "<group>"; };
+		1361F5F0200758D000939F7A /* SoccerBorad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoccerBorad.m; sourceTree = "<group>"; };
+		1361F5F32007597D00939F7A /* VC_MainPageHome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VC_MainPageHome.h; sourceTree = "<group>"; };
+		1361F5F42007597D00939F7A /* VC_MainPageHome.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VC_MainPageHome.m; sourceTree = "<group>"; };
+		13897BE820061E0C009017A2 /* VC_FavoriteTeam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VC_FavoriteTeam.h; sourceTree = "<group>"; };
+		13897BE920061E0C009017A2 /* VC_FavoriteTeam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VC_FavoriteTeam.m; sourceTree = "<group>"; };
 		139659B21FEA048300CF7ED0 /* BaseContentAdMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseContentAdMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		139659B51FEA048300CF7ED0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		139659B61FEA048300CF7ED0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +99,15 @@
 			path = UIColor_EXT;
 			sourceTree = "<group>";
 		};
+		1361F5F22007596900939F7A /* VC_MainPageHome */ = {
+			isa = PBXGroup;
+			children = (
+				1361F5F32007597D00939F7A /* VC_MainPageHome.h */,
+				1361F5F42007597D00939F7A /* VC_MainPageHome.m */,
+			);
+			path = VC_MainPageHome;
+			sourceTree = "<group>";
+		};
 		139659A91FEA048300CF7ED0 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +129,7 @@
 		139659B41FEA048300CF7ED0 /* BaseContentAdMoney */ = {
 			isa = PBXGroup;
 			children = (
+				1361F5F22007596900939F7A /* VC_MainPageHome */,
 				1304AAB71FEA593B00E99C78 /* Extensions */,
 				1304AAEA1FEA805800E99C78 /* BaseContentAdMoney.entitlements */,
 				139659B51FEA048300CF7ED0 /* AppDelegate.h */,
@@ -124,11 +143,15 @@
 				B86AE6241FEA66B600EE1FC3 /* VC_MatchSchedule.m */,
 				B86AE6261FEA66E000EE1FC3 /* VC_GroupTable.h */,
 				B86AE6271FEA66E000EE1FC3 /* VC_GroupTable.m */,
+				13897BE820061E0C009017A2 /* VC_FavoriteTeam.h */,
+				13897BE920061E0C009017A2 /* VC_FavoriteTeam.m */,
 				1304AAB51FEA560500E99C78 /* Supportingfile */,
 				B86AE6291FEA6AB900EE1FC3 /* TC_MatchScheduleCell.h */,
 				B86AE62A1FEA6AB900EE1FC3 /* TC_MatchScheduleCell.m */,
 				1302934E1FEB9B7000E25034 /* WebViewController.h */,
 				1302934F1FEB9B7000E25034 /* WebViewController.m */,
+				1361F5EF200758D000939F7A /* SoccerBorad.h */,
+				1361F5F0200758D000939F7A /* SoccerBorad.m */,
 			);
 			path = BaseContentAdMoney;
 			sourceTree = "<group>";
@@ -280,14 +303,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B86AE6281FEA66E000EE1FC3 /* VC_GroupTable.m in Sources */,
+				13897BEA20061E0C009017A2 /* VC_FavoriteTeam.m in Sources */,
 				B86AE62B1FEA6AB900EE1FC3 /* TC_MatchScheduleCell.m in Sources */,
 				139659BA1FEA048300CF7ED0 /* ViewController.m in Sources */,
 				B86AE6251FEA66B600EE1FC3 /* VC_MatchSchedule.m in Sources */,
 				130293501FEB9B7000E25034 /* WebViewController.m in Sources */,
 				139659C51FEA048300CF7ED0 /* main.m in Sources */,
+				1361F5F1200758D000939F7A /* SoccerBorad.m in Sources */,
 				139659B71FEA048300CF7ED0 /* AppDelegate.m in Sources */,
 				1304AAE91FEA69A200E99C78 /* UIColor_EXT.m in Sources */,
 				1304AAB41FEA55FA00E99C78 /* ApplicationDataHandler.m in Sources */,
+				1361F5F52007597D00939F7A /* VC_MainPageHome.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

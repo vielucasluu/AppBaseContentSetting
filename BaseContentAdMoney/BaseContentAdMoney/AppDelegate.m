@@ -29,7 +29,7 @@
     [dateFormater setDateFormat:@"yyyy-MM-dd"];
     dateFormater.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
     
-    NSDate* date = [dateFormater dateFromString:@"2018-01-05"];
+    NSDate* date = [dateFormater dateFromString:@"2018-02-01"];
     if ([date compare:[NSDate date]] == NSOrderedAscending) {
         return YES;
     }

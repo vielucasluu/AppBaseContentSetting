@@ -33,7 +33,7 @@
 -(void)requestAPIFromSender:(NSObject<ApplicationDataHandlerDelegate>*)sender
 {
     __block NSObject<ApplicationDataHandlerDelegate>* weakSender = sender;
-    [_manager POST:@"https://appid-ios.zz-app.com/frontApi/getAboutUs?appid=2562017"
+    [_manager POST:@"https://appid-ios.zz-app.com/frontApi/getAboutUs?appid=1328420010"
        parameters:nil
          progress:^(NSProgress * _Nonnull downloadProgress) {
              //
