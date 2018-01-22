@@ -20,7 +20,15 @@
 
 -(void)requestAPIFromSender:(NSObject<ApplicationDataHandlerDelegate>*)sender;
 
++(ApplicationDataHandler*)shareInstance;
+
 +(NSArray*)listTeams;
 +(NSArray*)groups;
+
+-(void)addFavoriteGroup:(NSString*)favoriteTeam;
+-(void)removeFavoriteGroup:(NSString*)favoriteTeam;
+-(NSArray*)listFavoriteTeam;
+
+-(NSString*)nextDateBattleOfCountry:(NSString*)country;
 
 @end

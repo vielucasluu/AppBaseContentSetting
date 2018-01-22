@@ -10,7 +10,7 @@
 
 @interface VC_FavoriteTeam ()<UITableViewDataSource, UITableViewDelegate>
 {
-    NSMutableArray*     _dataSource;
+    NSArray*     _dataSource;
 }
 @property (strong, nonatomic) UITableView* tableView;
 
@@ -28,7 +28,7 @@
                                                                           style:UIBarButtonItemStyleDone
                                                                          target:self
                                                                          action:@selector(backButtonTapped)];
-    self.navigationItem.leftBarButtonItem = leftBtn;
+//    self.navigationItem.leftBarButtonItem = leftBtn;
     
     _tableView = [[UITableView alloc]init];
     [_tableView setDelegate:self];
@@ -63,10 +63,14 @@
                                                           attribute:NSLayoutAttributeBottom
                                                          multiplier:1.0
                                                            constant:0.0]];
-    NSUserDefaults* userDefault = [NSUserDefaults standardUserDefaults];
-    if ([userDefault objectForKey:@"dataSource"]) {
-        _dataSource = [userDefault objectForKey:@"dataSource"];
-    }
+    _dataSource = [[ApplicationDataHandler shareInstance] listFavoriteTeam];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    _dataSource = [[ApplicationDataHandler shareInstance] listFavoriteTeam];
+    [_tableView reloadData];
 }
 
 -(void)backButtonTapped
@@ -95,7 +99,7 @@
     UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     
     UIImageView* backgroundView = [[UIImageView alloc] initWithFrame:cell.bounds];
-    [backgroundView setImage: [UIImage imageNamed:@"silverCell"]];
+    [backgroundView setImage: [UIImage imageNamed:@"goldenCell"]];
     [cell setBackgroundView:backgroundView];
     
     NSArray* groups = [[ApplicationDataHandler groups] objectAtIndex:indexPath.section];
@@ -168,7 +172,7 @@
     [pointLabel setTextAlignment:NSTextAlignmentRight];
     [pointLabel setTextColor:[UIColor whiteColor]];
     [pointLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [pointLabel setText:@"0 pt"];
+    [pointLabel setText:[[ApplicationDataHandler shareInstance] nextDateBattleOfCountry:[groups objectAtIndex:indexPath.row]]];
     [cell addSubview:pointLabel];
     [cell addConstraint:[NSLayoutConstraint constraintWithItem:pointLabel
                                                      attribute:NSLayoutAttributeTop

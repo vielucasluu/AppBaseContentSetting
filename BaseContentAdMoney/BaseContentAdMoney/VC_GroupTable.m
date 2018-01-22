@@ -27,7 +27,7 @@
                                                                           style:UIBarButtonItemStyleDone
                                                                          target:self
                                                                          action:@selector(backButtonTapped)];
-    self.navigationItem.leftBarButtonItem = leftBtn;
+//    self.navigationItem.leftBarButtonItem = leftBtn;
     
 //    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"Favorite"
 //                                                                 style:UIBarButtonItemStyleDone
@@ -274,8 +274,17 @@
                                                        style:UIAlertActionStyleDefault
                                                      handler:^(UIAlertAction * _Nonnull action) {
                                                          [alertVC dismissViewControllerAnimated:YES completion:nil];
+                                                         
+                                                         NSArray* groups = [[ApplicationDataHandler groups] objectAtIndex:indexPath.section];
+                                                         [[ApplicationDataHandler shareInstance] addFavoriteGroup:[groups objectAtIndex:indexPath.row]];
+                                                     }];
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+                                                         [alertVC dismissViewControllerAnimated:YES completion:nil];
                                                      }];
     [alertVC addAction:okAction];
+    [alertVC addAction:cancelAction];
     [self presentViewController:alertVC animated:YES completion:nil];
 }
 

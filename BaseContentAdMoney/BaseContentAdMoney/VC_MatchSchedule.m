@@ -30,7 +30,7 @@
                                                                           style:UIBarButtonItemStyleDone
                                                                          target:self
                                                                          action:@selector(backButtonTapped)];
-    self.navigationItem.leftBarButtonItem = leftBtn;
+//    self.navigationItem.leftBarButtonItem = leftBtn;
     
     UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithTitle:@"Refresh"
                                                                  style:UIBarButtonItemStyleDone
