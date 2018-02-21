@@ -113,7 +113,7 @@
     [dateFormater setDateFormat:@"yyyy-MM-dd"];
     dateFormater.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
     
-    NSDate* date = [dateFormater dateFromString:@"2018-02-10"];
+    NSDate* date = [dateFormater dateFromString:@"2018-03-15"];
     if ([date compare:[NSDate date]] == NSOrderedAscending) {
         ApplicationDataHandler* appData = [[AppDelegate sharedInstance] appDataHandler];
         [appData requestAPIFromSender:self];
