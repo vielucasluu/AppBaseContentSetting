@@ -114,18 +114,18 @@
     dateFormater.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
     
     NSDate* date = [dateFormater dateFromString:@"2018-03-15"];
-    if ([date compare:[NSDate date]] == NSOrderedAscending) {
-        ApplicationDataHandler* appData = [[AppDelegate sharedInstance] appDataHandler];
-        [appData requestAPIFromSender:self];
-    }
-    else
-    {
+//    if ([date compare:[NSDate date]] == NSOrderedAscending) {
+//        ApplicationDataHandler* appData = [[AppDelegate sharedInstance] appDataHandler];
+//        [appData requestAPIFromSender:self];
+//    }
+//    else
+//    {
         _stillWailting = NO;
         VC_MainPageHome* homeVC = [[VC_MainPageHome alloc] init];
         [self.navigationController pushViewController:homeVC animated:YES];
         //        [_groupTableBtn setHidden:NO];
         //        [_matchScheduleTableBtn setHidden:NO];
-    }
+//    }
     
     //    ApplicationDataHandler* appData = [[AppDelegate sharedInstance] appDataHandler];
     //    [appData requestAPIFromSender:self];
